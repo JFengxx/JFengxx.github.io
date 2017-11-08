@@ -309,51 +309,16 @@
 
       
         
-          
-            <h2 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h2><p><strong>什么是spring框架?</strong></p>
+          <h2 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h2><p><strong>什么是spring框架?</strong></p>
 <p>Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。   </p>
-<p>  轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。<br>    Spring以IoC、AOP为主要思想，其中IoC，Inversion of Control 指控制反转或反向控制。在Spring框架中我们通过配置创建类对象，由Spring在运行阶段实例化、组装对象。AOP，Aspect Oriented Programming，面向切面编程，其思想是在执行某些代码前执行另外的代码，使程序更灵活、扩展性更好，可以随便地添加、删除某些功能。Servlet中的Filter便是一种AOP思想的实现。<br>　　<br>Spring同时也是一个“一站式”框架，即Spring在JavaEE的三层架构[表现层（Web层）、业务逻辑层（Service层）、数据访问层（DAO层）]中，每一层均提供了不同的解决技术。如下：</p>
-<p>表现层（Web层）：Spring MVC  </p>
-<p>业务逻辑层（Service层）：Spring的IoC  </p>
-<p>数据访问层（DAO层）：Spring的jdbcTemplate</p>
-<hr>
-<p><strong>spring框架组成</strong></p>
-<p><img src="D:/写博客的图片/spring框架组成.png" alt="image"></p>
-<hr>
-<p><strong>其中两个重要的概念 IOC 和 AOP</strong></p>
-<p> 1）IoC(Inversion of Control)</p>
-<p> 控制反转，对象创建责任的反转，在spring中BeanFacotory是IoC容器的核心接口，负责实例化，定位，配置应用程序中的对象及建立这些对象间的依赖。XmlBeanFacotory实现BeanFactory接口，通过获取xml配置文件数据，组成应用对象及对象间的依赖关系。<br>spring中有三种注入方式，一种是set注入，一种是接口注入，另一种是构造方法注入。</p>
-<ul>
-<li>往细里讲</li>
-</ul>
-<ol>
-<li><p>　在平时的java应用开发中，我们要实现某一个功能或者说是完成某个业务逻辑时至少需要两个或以上的对象来协作完成，在没有使用Spring的时候，每个对象在需要使用他的合作对象时，自己均要使用像new object() 这样的语法来将合作对象创建出来，这个合作对象是由自己主动创建出来的，创建合作对象的主动权在自己手上，自己需要哪个合作对象，就主动去创建，创建合作对象的主动权和创建时机是由自己把控的，而这样就会使得对象间的耦合度高了，A对象需要使用合作对象B来共同完成一件事，A要使用B，那么A就对B产生了依赖，也就是A和B之间存在一种耦合关系，并且是紧密耦合在一起，<br>而使用了Spring之后就不一样了，创建合作对象B的工作是由Spring来做的，Spring创建好B对象，然后存储到一个容器里面，当A对象需要使用B对象时，Spring就从存放对象的那个容器里面取出A要使用的那个B对象，然后交给A对象使用，至于Spring是如何创建那个对象，以及什么时候创建好对象的，A对象不需要关心这些细节问题(你是什么时候生的，怎么生出来的我可不关心，能帮我干活就行)，A得到Spring给我们的对象之后，两个人一起协作完成要完成的工作即可。</p>
-</li>
-<li><p>　　所以控制反转IoC(Inversion of Control)是说创建对象的控制权进行转移，以前创建对象的主动权和创建时机是由自己把控的，而现在这种权力转移到第三方，比如转移交给了IoC容器，它就是一个专门用来创建对象的工厂，你要什么对象，它就给你什么对象，有了 IoC容器，依赖关系就变了，原先的依赖关系就没了，它们都依赖IoC容器了，通过IoC容器来建立它们之间的关系。</p>
-</li>
-<li><p>DI(依赖注入)其实就是IOC的另外一种说法，DI是由Martin Fowler 在2004年初的一篇论文中首次提出的。他总结：控制的什么被反转了？就是：获得依赖对象的方式反转了。</p>
-</li>
-</ol>
-<p>2）</p>
-<hr>
-<p><strong>框架优缺点</strong><br>优点：</p>
-<ol>
-<li>轻量级的容器框架没有侵入性</li>
-<li>使用IoC容器更加容易组合对象直接间关系，面向接口编程，降低耦合</li>
-<li>Aop可以更加容易的进行功能扩展，遵循ocp开发原则</li>
-<li>创建对象默认是单例的，不需要再使用单例模式进行处理</li>
-</ol>
-<p>缺点：    </p>
-<p>业务功能依赖spring特有的功能，依赖与spring环境。</p>
-<hr>
-<p>IOC容器</p>
-<ul>
-<li>BeanFactory:<br>默认【懒加载】解析applicationContext.xml时，不会生成所有对象的实例，仅当调用getBean方法时，才会生成对应对象的实例</li>
-<li>ApplicationContext :<br>默认【非懒加载】解析applicationContext.xml时，同时生成所有对象的实例，并完成对xml文档的校验</li>
-</ul>
-<hr>
-
-          
+<p>  轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/08/Spring-1-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

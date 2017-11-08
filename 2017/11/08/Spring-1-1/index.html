@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Spring简介什么是spring框架? Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。      轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。    Spring以IoC、AOP为主">
+<meta name="description" content="Spring简介什么是spring框架? Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。      轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring(1)">
 <meta property="og:url" content="http://yoursite.com/2017/11/08/Spring-1-1/index.html">
 <meta property="og:site_name" content="JackFeng&#39;s blog">
-<meta property="og:description" content="Spring简介什么是spring框架? Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。      轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。    Spring以IoC、AOP为主">
+<meta property="og:description" content="Spring简介什么是spring框架? Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。      轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="d:/写博客的图片/spring框架组成.png">
-<meta property="og:updated_time" content="2017-11-08T12:24:07.405Z">
+<meta property="og:updated_time" content="2017-11-08T12:26:26.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring(1)">
-<meta name="twitter:description" content="Spring简介什么是spring框架? Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。      轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。    Spring以IoC、AOP为主">
+<meta name="twitter:description" content="Spring简介什么是spring框架? Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。      轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。">
 <meta name="twitter:image" content="d:/写博客的图片/spring框架组成.png">
 
 
@@ -313,7 +313,7 @@
       
         <h2 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h2><p><strong>什么是spring框架?</strong></p>
 <p>Spring框架是个轻量级的Java EE框架。所谓轻量级，是指不依赖于容器就能运行的。Struts、Hibernate也是轻量级的。   </p>
-<p>  轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。<br>    Spring以IoC、AOP为主要思想，其中IoC，Inversion of Control 指控制反转或反向控制。在Spring框架中我们通过配置创建类对象，由Spring在运行阶段实例化、组装对象。AOP，Aspect Oriented Programming，面向切面编程，其思想是在执行某些代码前执行另外的代码，使程序更灵活、扩展性更好，可以随便地添加、删除某些功能。Servlet中的Filter便是一种AOP思想的实现。<br>　　<br>Spring同时也是一个“一站式”框架，即Spring在JavaEE的三层架构[表现层（Web层）、业务逻辑层（Service层）、数据访问层（DAO层）]中，每一层均提供了不同的解决技术。如下：</p>
+<p>  轻量级框架是相对于重量级框架而言的，重量级框架必须依赖特定的容器，例如EJB框架就必须运行在Glassfish、JBoss等支持EJB的容器中，而不能运行在Tomcat中。<br> <a id="more"></a><br>    Spring以IoC、AOP为主要思想，其中IoC，Inversion of Control 指控制反转或反向控制。在Spring框架中我们通过配置创建类对象，由Spring在运行阶段实例化、组装对象。AOP，Aspect Oriented Programming，面向切面编程，其思想是在执行某些代码前执行另外的代码，使程序更灵活、扩展性更好，可以随便地添加、删除某些功能。Servlet中的Filter便是一种AOP思想的实现。<br>　　<br>Spring同时也是一个“一站式”框架，即Spring在JavaEE的三层架构[表现层（Web层）、业务逻辑层（Service层）、数据访问层（DAO层）]中，每一层均提供了不同的解决技术。如下：</p>
 <p>表现层（Web层）：Spring MVC  </p>
 <p>业务逻辑层（Service层）：Spring的IoC  </p>
 <p>数据访问层（DAO层）：Spring的jdbcTemplate</p>
